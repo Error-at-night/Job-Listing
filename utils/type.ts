@@ -15,5 +15,5 @@ export interface Jobs {
 }
 
 export interface JobListProps {
-  jobs: Jobs;
+  job: Jobs;
 }

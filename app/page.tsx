@@ -7,10 +7,10 @@ export default async function Home() {
   const jobsData: Jobs[] = await jobs.json()
 
   return (
-    <ul>
+    <div className="">
       {jobsData.map((job) => (
-        <JobList key={job.id} jobs={job}/>
+        <JobList key={job.id} job={job}/>
       ))}
-    </ul>
+    </div>
   );
 }
