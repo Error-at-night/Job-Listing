@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { Jobs } from "@/utils/type"
 import JobBoard from "./_components/JobBoard"
 
@@ -19,7 +20,9 @@ export default async function Home() {
 
   return (
     <>
-      <JobBoard jobsData={jobsData} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <JobBoard jobsData={jobsData} />
+      </Suspense>
     </>
   )
 }
