@@ -29,7 +29,7 @@ export default function RootLayout({
         className="h-[100vh] bg-[hsl(180,52%,96%)]"
       >
         <Header/>
-        <main className="pb-8 px-8">
+        <main className="mt-10 pb-4 px-8">
           {children}
         </main>
       </body>

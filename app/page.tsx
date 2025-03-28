@@ -1,16 +1,25 @@
-import { Jobs } from "@/utils/type";
-import JobList from "./_components/JobList";
+import { Jobs } from "@/utils/type"
+import JobBoard from "./_components/JobBoard"
 
 export default async function Home() {
-  const jobs = await fetch("http://localhost:3001/jobs")
+  let jobsData: Jobs[] = [];
 
-  const jobsData: Jobs[] = await jobs.json()
+  try {
+    const res = await fetch("http://localhost:3001/jobs")
+
+    if (!res.ok) {
+      throw new Error("Could not fetch the job list")
+    }
+
+    jobsData = await res.json()
+    
+  } catch (error) {
+    console.log(error)
+  }
 
   return (
-    <div className="">
-      {jobsData.map((job) => (
-        <JobList key={job.id} job={job}/>
-      ))}
-    </div>
-  );
+    <>
+      <JobBoard jobsData={jobsData} />
+    </>
+  )
 }

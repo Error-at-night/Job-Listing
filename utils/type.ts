@@ -16,4 +16,7 @@ export interface Jobs {
 
 export interface JobListProps {
   job: Jobs;
+  filters: string[];
+  handleFilterClick: (filter: string) => void;
 }
+
