@@ -20,12 +20,12 @@ function JobList({ job, filters, handleFilterClick }: JobListProps) {
           <div className="flex flex-col mt-6 lg:mt-0">
             <div className="flex items-center flex-wrap lg:ms-5">
               <h1 className="text-[hsl(180,29%,50%)] font-bold me-3">{job.company}</h1>
-              <p className={`${job.new ? "block" : "hidden"} me-2 py-1 px-2 font-bold rounded-full 
+              <p className={`${job.new ? "block" : "hidden"} me-2 pt-1 px-2 font-bold rounded-full 
                 bg-[hsl(180,29%,50%)] text-[hsl(180,31%,95%)]`}
               >
                 NEW!
               </p>
-              <p className={`${job.featured ? "block" : "hidden"} py-1 px-2 font-bold rounded-full 
+              <p className={`${job.featured ? "block" : "hidden"} pt-1 px-2 font-bold rounded-full 
                 bg-black text-[hsl(180,31%,95%)]`}
               >
                 FEATURED
@@ -42,13 +42,13 @@ function JobList({ job, filters, handleFilterClick }: JobListProps) {
           </div>
         </div>
         <hr className="opacity-20 lg:hidden"/>
-        <div className="mt-3 lg:mt-0 flex flex-wrap gap-3">
+        <div className="mt-3 lg:mt-0 flex flex-wrap items-center gap-3">
           {[job.role, job.level, ...job.languages, ...job.tools].map((filter) =>
             <button
               key={filter}
               onClick={() => handleFilterClick(filter)}
               className={`${filters.includes(filter) ? "bg-[hsl(180,29%,50%)] text-[hsl(180,31%,95%)]" : 
-                "bg-[hsl(180,31%,95%)] text-[hsl(180,29%,50%)]"} px-4 py-1 font-bold rounded-sm cursor-pointer
+                "bg-[hsl(180,31%,95%)] text-[hsl(180,29%,50%)]"} px-4 pt-1 font-bold rounded-sm cursor-pointer
                 hover:bg-[hsl(180,29%,50%)] hover:text-white`
               }
             >

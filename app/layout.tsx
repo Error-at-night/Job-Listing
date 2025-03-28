@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
+import { League_Spartan } from "next/font/google" 
 import "./globals.css";
 import Header from "./_components/Header";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  display: "swap"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="h-[100vh] bg-[hsl(180,52%,96%)]"
+        className={`${leagueSpartan.className} h-[100vh] bg-[hsl(180,52%,96%)]`}
       >
         <Header/>
         <main className="mt-10 pb-4 px-8">

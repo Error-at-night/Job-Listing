@@ -41,7 +41,8 @@ Users should be able to:
 
 I built this project using Next.js and TypeScript to practice what I learned from the Next.js and TypeScript course I took. For example, I used useSearchParams() to get and set query parameters. This makes it easier to share a link without losing the URL state, and even when the page is reloaded, the query remains stored in the URL.
 
-I also learned how to determine when a component should be a client component by using "use client". Declaring a component as a client component allows it to handle interactions and events (e.g., click events) on the frontend.
+I also learned how to determine when a component should be a client component by using "use client". Declaring a component as a client component allows it to handle interactions and events (e.g., click events) on the frontend. Also the way we 
+add font in Next.js is quite different (Check the layout component to see how it is implemented)
 
 ### Continued development
 

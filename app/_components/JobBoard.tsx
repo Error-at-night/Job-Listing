@@ -49,7 +49,7 @@ function JobBoard({ jobsData }: JobBoardProps) {
                 className="ml-2 bg-[hsl(180,29%,50%)] cursor-pointer text-black hover:bg-black
                   p-3  flex items-center justify-center font-extrabold rounded-br-sm rounded-tr-sm"
               >
-                <Image src="/icon-remove.svg" alt="remove-icon" width={15} height={15}/>
+                <Image src="/icon-remove.svg" alt="remove-icon" width={13} height={13}/>
               </button>
             </div>
           )}
